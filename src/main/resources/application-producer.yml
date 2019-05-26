@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-cloud-producer
+server:
+  port: 9000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8008/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

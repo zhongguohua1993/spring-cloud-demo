@@ -4,13 +4,15 @@ spring:
   freemarker:
     prefer-file-system-access: false
 server:
-  port: 8008
+  port: 8000
 
 eureka:
   client:
     # 声明是否将自己的信息注册到 Eureka 服务器上
-    register-with-eureka: false
+#    register-with-eureka: false
     # 是否到 Eureka 服务器中抓取注册信息
-    fetch-registry: false
+#    fetch-registry: false
     service-url:
-      defaultZone: http://localhost:${server.port}/eureka/
+      defaultZone: http://peer2:8001/eureka/
+  instance:
+    hostname: peer1
